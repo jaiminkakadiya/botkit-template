@@ -10,7 +10,7 @@ module.exports = function( controller ) {
         async( answer, convo, bot ) => {},
         'stated_number'
     );
-    convo.say( `Square of {{ vars.stated_number }} is  {{vars.stated_number}*{vars.stated_number }}` );
+    convo.say( `Square {{ vars.stated_number }} is  {{vars.stated_number}*{vars.stated_number }}` );
 
     controller.addDialog( convo );
 
