@@ -12,7 +12,7 @@ module.exports = function( controller ) {
     );
     convo.say( 'Square of {{vars.stated_number}} is ');
     var a = 23;
-    convo.say(to.String(a));
+    convo.say(to.String(23));
 
     controller.addDialog( convo );
 
