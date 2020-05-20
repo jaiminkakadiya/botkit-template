@@ -11,7 +11,7 @@ module.exports = function( controller ) {
         'stated_number'
     );
     convo.say( 'Square of {{vars.stated_number}} is ');
-    var a = 23;
+    var a = `${ vars.stated_number }`;
     convo.say(`${ a }`);
 
     controller.addDialog( convo );
