@@ -12,7 +12,7 @@ module.exports = function( controller ) {
     );
     convo.say( 'Sqaure of {{vars.stated_number}} is ');
     var a = vars.stated_number*vars.stated_number
-    convo.say( '{{a}}');
+    convo.say( '{{vars.a}}');
 
     controller.addDialog( convo );
 
