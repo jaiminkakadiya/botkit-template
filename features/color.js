@@ -10,7 +10,7 @@ const { BotkitConversation } = require( 'botkit' );
          async( answer, convo, bot ) => {},
          'stated_color'
      );
-     convo.say( `Cool, I like {{ vars.stated_color }} too!` );
+     convo.say( `Nice, I like {{ vars.stated_color }} too!` );
 
      controller.addDialog( convo );
 
