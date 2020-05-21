@@ -14,6 +14,11 @@ module.exports = function(controller) {
         await bot.reply(message,{ text: 'I heard a number using a regular expression.' });
     });
 
+    // use a regular expression to match the text of the message
+    controller.hears(new RegExp(\b((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)(\.|$)){4}\b), ['message','direct_message'], async function(bot, message) {
+        await bot.reply(message,{ text: 'I heard a number using a regular expression.' });
+    });
+
     // match any one of set of mixed patterns like a string, a regular expression
     controller.hears(['allcaps', new RegExp(/^[A-Z\s]+$/)], ['message','direct_message'], async function(bot, message) {
         await bot.reply(message,{ text: 'I HEARD ALL CAPS!' });
