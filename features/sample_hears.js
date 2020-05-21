@@ -15,8 +15,8 @@ module.exports = function(controller) {
     });
 
     // use a regular expression to match the text of the message
-    controller.hears(new RegExp(\b((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)(\.|$)){4}\b), ['message','direct_message'], async function(bot, message) {
-        await bot.reply(message,{ text: 'I heard a number using a regular expression.' });
+    controller.hears(new RegExp(/((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)(\.|$)){4}/), ['message','direct_message'], async function(bot, message) {
+        await bot.reply(message,{ text: 'Its a Valid IP' });
     });
 
     // match any one of set of mixed patterns like a string, a regular expression
